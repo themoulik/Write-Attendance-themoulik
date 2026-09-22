@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-section" class="container">
+        <h2>Institution Login</h2>
+        <input type="text" id="inst-id" placeholder="Institution ID (try: admin)">
+        <input type="password" id="inst-pass" placeholder="Password (try: 1234)">
+        <button onclick="login()">Login</button>
+        <p id="login-error" class="error"></p>
+    </div>
+
+    <!-- Dashboard Section (Hidden initially) -->
+    <div id="dashboard-section" class="container hidden">
+        <header>
+            <h2>Write Attendance</h2>
+            <p id="datetime"></p>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+        <div class="card">
+            <h3>Add New Student</h3>
+            <div class="input-group">
+                <input type="text" id="std-id" placeholder="Student ID">
+                <input type="text" id="std-name" placeholder="Student Name">
+                <input type="text" id="std-phone" placeholder="Phone Number">
+                <button onclick="addStudent()">Add Student</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Mark Attendance</h3>
+            <button class="action-btn" onclick="markAllAttendance()">Submit Today's Attendance</button>
+            <div id="students-list"></div>
+        </div>
+
+        <div class="card">
+            <h3>Attendance Shortlist (< 75%)</h3>
+            <button class="action-btn danger" onclick="showShortlist()">Generate Shortlist</button>
+            <div id="shortlist-result"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

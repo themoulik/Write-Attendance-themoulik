@@ -1,0 +1,76 @@
+:root {
+    --primary: #4F46E5;
+    --secondary: #4338CA;
+    --bg-color: #F3F4F6;
+    --text-color: #1F2937;
+    --white: #FFFFFF;
+    --danger: #EF4444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+h2, h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { background-color: var(--secondary); }
+
+.logout-btn { background-color: #6B7280; width: auto; padding: 5px 15px; }
+.action-btn { margin-bottom: 15px; }
+.danger { background-color: var(--danger); }
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.error { color: var(--danger); font-size: 14px; }
